@@ -1,0 +1,109 @@
+body {
+    margin: 0px;
+    width: 100vh;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+
+    background-color: #463054;
+    
+    font-family: "VT323", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.calculatorBody {
+    display: flex;
+    padding: 40px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    border-radius: 16px;
+    border-bottom: 16px solid #272535;
+    background: #414254;
+    box-shadow: 0px 0px 0px 4px #000;
+}
+
+.display {
+    font-size: 48px;
+    width: 304px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    border-top: 6px solid #656F63;
+    background: #7E8A7C;
+    box-shadow: 0px 0px 0px 3px #000;
+    
+}
+.display p{
+    color:#3b4538;
+    margin: 0px;
+    padding: 16px;
+    display: flex;
+    justify-content: end;
+    flex: 1;
+}
+.buttons {
+    display: flex;
+    width: 304px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+}
+
+.displayControl {
+    height: 50px;
+    width: 104px;
+    border-radius: 6px;
+    border-bottom: 6px solid #445162;
+    background: #687C87;
+    box-shadow: 0px 0px 0px 3px #000;
+}
+
+.operation {
+    height: 50px;
+    width: 64px;
+    border-radius: 6px;
+    border-bottom: 6px solid #445162;
+    background: #687C87;
+    box-shadow: 0px 0px 0px 3px #000;
+}
+
+.number {
+    height: 50px;
+    width: 64px;
+    border-radius: 6px;
+    border-bottom: 6px solid #5F737D;
+    background: #9CAEB8;
+    box-shadow: 0px 0px 0px 3px #000;
+}
+
+#equal{
+    height: 50px;
+    width: 143px;
+    border-radius: 6px;
+    background: #EC8C4B;
+    border-bottom: 6px solid #7f412d;
+    box-shadow: 0px 0px 0px 3px #000;
+}
+
+button{
+    border: 0px solid;
+    font-family: "VT323", 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color:#272535;
+}
+button:active{
+    border-top:6px solid #000000;
+    border-bottom: hidden;
+
+}
