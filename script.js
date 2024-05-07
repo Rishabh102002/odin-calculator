@@ -11,8 +11,8 @@ function display(displayValue) {
 
 function operate(firstNumber, secondNumber, operation) {
   let result;
-  const num1 = parseInt(firstNumber);
-  const num2 = parseInt(secondNumber);
+  const num1 = parseFloat(firstNumber);
+  const num2 = parseFloat(secondNumber);
 
   switch (operation) {
     case "+":
@@ -101,6 +101,8 @@ clearBtn.addEventListener("click", () => {
   let displayText = document.querySelector("p");
   displayText.textContent = "000";
   currentValue = "";
+  firstNumber ="";
+  secondNumber="";
   isOperationSelected = false;
 })
 
@@ -127,7 +129,7 @@ equalBtn.addEventListener("click", () => {
       isOperationSelected = false;
     }
     else{
-      let answer_roundup = answer.toFixed(12);
+      let answer_roundup = removeTrailingZeros(answer.toFixed(12));
       firstNumber = answer_roundup;
       secondNumber = "";
       currentValue = answer_roundup;
@@ -138,3 +140,19 @@ equalBtn.addEventListener("click", () => {
   }
 })
 
+function removeTrailingZeros(floatNumber) {
+  let numStr = floatNumber.toString();
+  if (numStr.includes('.')) {
+      numStr = numStr.replace(/\.?0+$/, '');
+  }
+  return numStr;
+}
+
+const dotBtn = document.querySelector("#dot");
+dotBtn.addEventListener("click",()=>{
+  if(currentValue.includes(".")===false){
+    console.log("yes its integer")
+    currentValue+=".";
+    display(currentValue)
+  }
+})
